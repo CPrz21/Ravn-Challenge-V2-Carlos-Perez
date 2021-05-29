@@ -1,6 +1,7 @@
 import { SidebarWrapper } from "./styles"
 import { CharacterCell } from "./CharacterCell"
-import { Loader } from "../Loader"
+import { Loader } from "../Loader";
+import { ErrorMessage } from "../ErrorMessage";
 
 export const Sidebar = () => {
   return (
@@ -9,6 +10,7 @@ export const Sidebar = () => {
       <CharacterCell />
       <CharacterCell />
       <Loader />
+      <ErrorMessage />
     </SidebarWrapper>
   )
 }
