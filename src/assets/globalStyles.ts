@@ -42,6 +42,8 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 700;
         line-height: 20px;
         letter-spacing: 0.0125em;
+        text-align: left;
+        margin: 0;
         &.low-emphasis{
           color: var(---light);
         }
@@ -56,6 +58,8 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         line-height: 17px;
         letter-spacing: 0.0125em;
+        text-align: left;
+        margin: 0;
         &.low-emphasis{
           color: var(---light);
         }
