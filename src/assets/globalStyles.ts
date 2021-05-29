@@ -19,7 +19,6 @@ export const GlobalStyles = createGlobalStyle`
           format('truetype');
       font-weight: normal;
       font-style: normal;
-      font-display: swap;
     }
 
     :root {

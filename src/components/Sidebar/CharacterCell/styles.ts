@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CharacterCellWrapper = styled.button`
     width: 100%;
     min-height: 69px;
-    padding: 0 14px 0 0;
+    padding: 0 18px 0 0;
     background-color: var(--white);
     cursor: pointer;
     outline: none;
