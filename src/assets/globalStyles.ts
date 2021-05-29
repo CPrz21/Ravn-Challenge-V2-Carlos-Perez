@@ -8,39 +8,37 @@ import SFProDisplayRegularTTF from './fonts/SFProDisplayRegular/SFProDisplay-Reg
 
 export const GlobalStyles = createGlobalStyle`
     @font-face {
-    font-family: 'SF Pro Display';
-    src: url(${SFProDisplayRegularEOT});
-    src: url(${SFProDisplayRegularEOT + '?#iefix'})
-        format('embedded-opentype'),
-        url(${SFProDisplayRegularWOFF2})
-        format('woff2'),
-        url(${SFProDisplayRegularWOFF}) format('woff'),
-        url(${SFProDisplayRegularTTF})
-        format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+      font-family: 'SF Pro Display';
+      src: url(${SFProDisplayRegularEOT});
+      src: url(${SFProDisplayRegularEOT + '?#iefix'})
+          format('embedded-opentype'),
+          url(${SFProDisplayRegularWOFF2})
+          format('woff2'),
+          url(${SFProDisplayRegularWOFF}) format('woff'),
+          url(${SFProDisplayRegularTTF})
+          format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
     }
 
     :root {
-        --black: #121212;
-        --white: #ffffff;
-        --gray: #f2f2f2;
-        --gray-light: #828282;
-        --red: #ec5757;
-        --dark: #333333;
-        --light: #e5e5e5;
+      --ravn-black: #121212;
+      --dark: #333333;
+      --light: #828282;
+      --emphasis: #EC5757;
+      --white: #FFFFFF;
     }
 
     body {
-        margin: 0;
-        padding: 0;
-        font-family: 'SF Pro Display', sans-serif;
-        .container{
-            min-height: 100vh;
-            width: 100%;
-            overflow: hidden;
-            background-color: var(--gray-light);
-        }
+      margin: 0;
+      padding: 0;
+      font-family: 'SF Pro Display', sans-serif;
+      .container{
+        min-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        background-color: var(--white);
+      }
     }
 `;
