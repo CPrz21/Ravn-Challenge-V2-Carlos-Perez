@@ -1,12 +1,12 @@
-
 import { GlobalStyles } from './assets/globalStyles';
+import { Header } from './components/Header';
 
 function App() {
   return (
     <>
       <GlobalStyles />
       <section className="container">
-        <p>CARLOS PEREZ</p>
+        <Header/>
       </section>
     </>
   );
