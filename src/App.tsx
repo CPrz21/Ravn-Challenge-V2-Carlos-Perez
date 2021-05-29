@@ -1,8 +1,14 @@
+
+import { GlobalStyles } from './assets/globalStyles';
+
 function App() {
   return (
-    <div>
-      hello
-    </div>
+    <>
+      <GlobalStyles />
+      <section className="container">
+        <p>CARLOS PEREZ</p>
+      </section>
+    </>
   );
 }
 
