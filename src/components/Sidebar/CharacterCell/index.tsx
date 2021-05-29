@@ -8,7 +8,7 @@ export const CharacterCell = () => {
         <h2>Luke Skywalker</h2>
         <p className="text-light">Human from Tatooine</p>
       </div>
-      <img src={RightArrow} alt="arrow-right" />
+      <img src={RightArrow} alt="right-arrow" />
     </CharacterCellWrapper>
   )
 }
