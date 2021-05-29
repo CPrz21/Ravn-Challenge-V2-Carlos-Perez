@@ -8,4 +8,10 @@ export const ContentWrapper = styled.section`
     margin: 0;
     padding-top: 32px;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    &.hide{
+        display: none;
+    }
+  }
 `;

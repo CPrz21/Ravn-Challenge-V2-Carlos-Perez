@@ -8,4 +8,18 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   background-color: var(--ravn-black);
   padding: 0 33px;
+  position: relative;
+  img{
+    display: none;
+    margin-right: 12px;
+  }
+  @media (max-width: 768px) {
+    justify-content: center;
+    padding: 0;
+    img{
+      position: absolute;
+      left: 1rem;
+      display: block;
+    }
+  }
 `;
