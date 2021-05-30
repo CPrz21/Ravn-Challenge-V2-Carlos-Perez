@@ -2,19 +2,23 @@ import { useState, useEffect } from 'react';
 import { useQuery } from "@apollo/client";
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-
+// Global Styles
 import { GlobalStyles } from './assets/globalStyles';
+
+// Components
 import { Header } from './components/Header';
 import { Content } from './components/Content';
-import { CharacterCell } from './components/Sidebar/CharacterCell';
-
-import { getPeopleQuery } from './graphql/getPeopleQuery';
-
-import {PeopleParams, PeopleList, Character} from './types';
+import { CharacterCell } from './components/CharacterCell';
 import { Loader } from './components/Loader';
 import { ErrorMessage } from './components/ErrorMessage';
 
-function App() {
+// GQL Queries
+import { getPeopleQuery } from './graphql/getPeopleQuery';
+
+// Types
+import {PeopleParams, PeopleList, Character} from './types';
+
+export const App: React.FC = () => {
   const [people, setPeople] = useState<Character[]>([]);
   const [currentCharacter, setCurrentCharacter] = useState<Character | null>(null);
   const [shouldFetchMoreData, setShouldFetchMoreData] = useState<boolean>(true);
@@ -94,6 +98,7 @@ function App() {
               />
             ))
           }
+          {loading && people.length === 0 && <Loader />}
           {!loading && !!error && <ErrorMessage />}
         </InfiniteScroll> 
         <Content 

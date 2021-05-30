@@ -1,4 +1,7 @@
+// Styles
 import { HeaderWrapper } from './styles';
+
+// Icons
 import LeftArrow from '../../assets/icons/left-arrow.svg'
 
 type HeaderProps = {

@@ -1,8 +1,8 @@
 import {gql} from '@apollo/client';
 
 export const getPeopleQuery = gql`
-  query GetPeopleQuery($first: Int, $after: String, $last: Int) {
-    allPeople(first: $first, after: $after, last: $last) {
+  query GetPeopleQuery($first: Int, $after: String) {
+    allPeople(first: $first, after: $after) {
       people {
         id
         birthYear

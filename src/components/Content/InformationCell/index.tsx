@@ -1,3 +1,4 @@
+// Styles
 import { InformationCellWrapper } from './styles';
 
 type InformationCellProps = {

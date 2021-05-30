@@ -1,6 +1,11 @@
-import { Character } from "../../types"
-import { InformationCell } from "./InformationCell"
+// Styles
 import { ContentWrapper } from "./styles"
+
+// Component
+import { InformationCell } from "./InformationCell"
+
+// Types
+import { Character } from "../../types"
 
 type ContentProps = {
   currentCharacter: Character | null,

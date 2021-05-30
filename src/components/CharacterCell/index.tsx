@@ -1,6 +1,11 @@
+// Styles
 import { CharacterCellWrapper } from "./styles";
-import RightArrow from '../../../assets/icons/right-arrow.svg';
-import { Character } from "../../../types";
+
+// Icons
+import RightArrow from '../../assets/icons/right-arrow.svg';
+
+// Types
+import { Character } from "../../types";
 
 type CharacterCellProps = {
   character: Character,

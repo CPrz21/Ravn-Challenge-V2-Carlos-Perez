@@ -1,4 +1,7 @@
+// Styles
 import { LoaderWrapper  } from './styles';
+
+// Icons
 import Spinner from '../../assets/icons/spinner.png'
 
 export const Loader = () => {
