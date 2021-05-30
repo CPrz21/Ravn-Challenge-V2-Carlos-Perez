@@ -3,14 +3,23 @@ import { CharacterCell } from "./CharacterCell"
 import { Loader } from "../Loader";
 import { ErrorMessage } from "../ErrorMessage";
 
-export const Sidebar = () => {
+type SideBarProps = {
+  loading: boolean,
+  error: boolean
+}
+
+export const Sidebar: React.FC<SideBarProps> = ({
+  loading,
+  error,
+  children
+}) => {
   return (
     <SidebarWrapper>
-      <CharacterCell />
-      <CharacterCell />
-      <CharacterCell />
-      <Loader />
-      <ErrorMessage />
+      {
+        !loading && children
+      }
+      {loading && <Loader />}
+      {error && <ErrorMessage />}
     </SidebarWrapper>
   )
 }

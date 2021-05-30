@@ -6,6 +6,7 @@ export const SidebarWrapper = styled.div`
     background: var(--white);
     box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.15);
     padding: 0 0 0 14px;
+    overflow: auto;
     @media (max-width: 768px) {
         width: 100%;
         &.hide{
