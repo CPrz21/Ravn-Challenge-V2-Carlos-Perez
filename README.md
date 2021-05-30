@@ -1,6 +1,17 @@
 # RAVN CHALLENGE V2 CARLOS PEREZ
 Web app that allows you to browse the Star Wars characters and show their personal infomation
 
+## Installation and Setup Instructions
+Clone down this repository. You will need `node (v.14.15.5)` and `yarn (v.1.22.5)` installed globally on your machine.
+
+Installation:
+`yarn install`
+
+To Start Server:
+`yarn dev`
+
+To Visit App:
+`localhost:3000`
 ## Live Demo
 [**RAVN CHALLENGE V2 CARLOS PEREZ**](https://ravn-challenge-v2-carlos-perez.netlify.app/)
 
@@ -13,18 +24,6 @@ Web app that allows you to browse the Star Wars characters and show their person
 <img src="./Screenshots/Screenshot6.png" alt="screenshot6" width="300"/>
 <img src="./Screenshots/Screenshot7.png" alt="screenshot7" width="300"/>
 
-
-## Installation and Setup Instructions
-Clone down this repository. You will need `node (v.14.15.5)` and `yarn (v.1.22.5)` installed globally on your machine.
-
-Installation:
-`yarn install`
-
-To Start Server:
-`yarn dev`
-
-To Visit App:
-`localhost:3000`
   
 ## Author
 -   [**Carlos Perez**](https://github.com/CPrz21)  - FrontEnd Dev ⭐️
