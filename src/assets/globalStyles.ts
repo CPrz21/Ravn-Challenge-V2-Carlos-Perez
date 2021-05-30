@@ -77,6 +77,24 @@ export const GlobalStyles = createGlobalStyle`
         .wrapper{
           height: calc(100vh - 52px);
           display: flex;
+          @media (max-width: 768px) {
+            &.hide{
+              & >.infinite-scroll-component__outerdiv{
+                display: none;
+              }
+            }
+          }
+          .infinite-scroll-component__outerdiv{
+            width: 350px;
+            max-height: 100%;
+            background: var(--white);
+            box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.15);
+            padding: 0 0 0 14px;
+            overflow: hidden;
+            @media (max-width: 768px) {
+              width: 100%;
+            }
+          }
         }
       }
     }

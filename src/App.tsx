@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
 import { useQuery } from "@apollo/client";
+import InfiniteScroll from 'react-infinite-scroll-component';
+
 
 import { GlobalStyles } from './assets/globalStyles';
 import { Header } from './components/Header';
-import { Sidebar } from './components/Sidebar';
 import { Content } from './components/Content';
 import { CharacterCell } from './components/Sidebar/CharacterCell';
 
 import { getPeopleQuery } from './graphql/getPeopleQuery';
 
 import {PeopleParams, PeopleList, Character} from './types';
+import { Loader } from './components/Loader';
+import { ErrorMessage } from './components/ErrorMessage';
 
 function App() {
   const [people, setPeople] = useState<Character[]>([]);
@@ -21,19 +24,19 @@ function App() {
     loading, 
     fetchMore
   } = useQuery<PeopleList,PeopleParams>(getPeopleQuery, {
-    variables: {first: 20, after: ''},
+    variables: {first: 16, after: ''},
     fetchPolicy: 'cache-and-network',
   });
 
   useEffect(() => {
-    if (allPeople?.people.length && people.length === 0) {
+    if (allPeople?.people.length) {
       if (!allPeople.pageInfo.hasNextPage) {
         setShouldFetchMoreData(false);
       }
 
-      return setPeople(allPeople.people);
+      setPeople(allPeople.people);
     }
-  }, [allPeople, people]);
+  }, [allPeople?.people, allPeople?.people.length, allPeople?.pageInfo]);
 
   const fetchMorePeople = () => {
     if (allPeople?.people.length)
@@ -72,12 +75,15 @@ function App() {
         showCharacterTitle={!!currentCharacter?.name}
         onClick={() => setCurrentCharacter(null)}
       />
-      <div className="wrapper">
-        <Sidebar
-          show={!!currentCharacter}
-          loading={loading} 
-          error={!!error} 
-          loadMoreData={fetchMorePeople}
+      <div 
+        className={`wrapper ${!currentCharacter ? '' : 'hide'}`}
+      >
+        <InfiniteScroll
+          dataLength={allPeople?.people.length || 0}
+          next={() => fetchMorePeople()}
+          hasMore={shouldFetchMoreData}
+          loader={<Loader />}
+          height="100%"
         >
           {
             people?.map((character) => (
@@ -88,7 +94,8 @@ function App() {
               />
             ))
           }
-        </Sidebar>
+          {!loading && !!error && <ErrorMessage />}
+        </InfiniteScroll> 
         <Content 
           currentCharacter={currentCharacter}
           show={!!currentCharacter}

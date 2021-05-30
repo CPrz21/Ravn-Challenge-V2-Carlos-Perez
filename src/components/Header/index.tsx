@@ -11,7 +11,6 @@ export const Header: React.FC<HeaderProps> = ({
   showCharacterTitle,
   onClick,
 }) => {
-  console.log(window.innerWidth);
   return (
     <HeaderWrapper>
       {showCharacterTitle && <img src={LeftArrow} alt="left-arrow" onClick={() => onClick()} />}
