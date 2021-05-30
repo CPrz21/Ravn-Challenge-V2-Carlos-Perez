@@ -33,14 +33,14 @@ export const App: React.FC = () => {
   });
 
   useEffect(() => {
-    if (allPeople?.people.length) {
+    if (allPeople?.people || allPeople?.people.length || allPeople?.pageInfo) {
       if (!allPeople.pageInfo.hasNextPage) {
         setShouldFetchMoreData(false);
       }
 
       setPeople(allPeople.people);
     }
-  }, [allPeople?.people, allPeople?.people.length, allPeople?.pageInfo]);
+  }, [allPeople]);
 
   const fetchMorePeople = () => {
     if (allPeople?.people.length)
