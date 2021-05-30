@@ -20,7 +20,7 @@ interface IVehicleConnection {
   vehicles: IVehicle[];
 }
 
-export type Person = {
+export type Character = {
   id: string;
   birthYear: string;
   name: string;
@@ -39,7 +39,7 @@ interface IPageInfo {
 
 export type PeopleList = {
   allPeople: {
-    people: Person[];
+    people: Character[];
     totalCount: number;
     pageInfo: IPageInfo;
   };

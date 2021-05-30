@@ -6,4 +6,7 @@ export const InformationCellWrapper = styled.div`
   justify-content: space-between;
   min-height: 69px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  h2{
+    text-transform: capitalize;
+  }
 `;

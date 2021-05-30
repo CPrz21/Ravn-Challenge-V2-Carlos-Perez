@@ -1,16 +1,18 @@
 import { InformationCellWrapper } from './styles';
 
 type InformationCellProps = {
-  enableSuffix?: boolean
+  title: string,
+  suffix?: string
 }
 
 export const InformationCell: React.FC<InformationCellProps> = ({
-  enableSuffix
+  title,
+  suffix
 }) => {
   return (
     <InformationCellWrapper>
-      <h2 className="text-light">Eye Color</h2>
-      {enableSuffix && <h2>Blue</h2>}
+      <h2 className="text-light">{title}</h2>
+      {suffix && <h2>{suffix}</h2>}
     </InformationCellWrapper>
   )
 };
