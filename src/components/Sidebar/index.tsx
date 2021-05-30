@@ -1,7 +1,6 @@
 import { useRef, useEffect } from 'react';
 
 import { SidebarWrapper } from "./styles"
-import { CharacterCell } from "./CharacterCell"
 import { Loader } from "../Loader";
 import { ErrorMessage } from "../ErrorMessage";
 
@@ -11,14 +10,16 @@ import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 type SideBarProps = {
   loading: boolean,
   error: boolean,
-  loadMoreData: Function
+  loadMoreData: Function,
+  show: boolean
 }
 
 export const Sidebar: React.FC<SideBarProps> = ({
   loading,
   error,
   loadMoreData,
-  children
+  children,
+  show
 }) => {
 
   const ref = useRef(null);
@@ -38,7 +39,7 @@ export const Sidebar: React.FC<SideBarProps> = ({
   console.log("🚀 ~ file: index.tsx ~ line 31 ~ isBottomVisible", isBottomVisible)
 
   return (
-    <SidebarWrapper>
+    <SidebarWrapper className={`${show ? 'hide' : ''}`}>
       {
         !loading && children
       }

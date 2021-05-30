@@ -1,11 +1,21 @@
 import { HeaderWrapper } from './styles';
 import LeftArrow from '../../assets/icons/left-arrow.svg'
 
-export const Header = () => {
+type HeaderProps = {
+  title: string,
+  showCharacterTitle: boolean,
+  onClick: ()=>void
+}
+export const Header: React.FC<HeaderProps> = ({
+  title,
+  showCharacterTitle,
+  onClick,
+}) => {
+  console.log(window.innerWidth);
   return (
     <HeaderWrapper>
-      <img src={LeftArrow} alt="left-arrow" />
-      <h2 className="text-gray">Ravn Star Wars Registry</h2>
+      <img src={LeftArrow} alt="left-arrow" onClick={() => onClick()} />
+      <h2 className="text-gray">{(window.innerWidth < 768 && showCharacterTitle) ? title : 'Ravn Star Wars Registry'}</h2>
     </HeaderWrapper>
   )
 }

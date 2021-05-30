@@ -24,17 +24,12 @@ function App() {
     variables: {first: 20, after: ''},
     fetchPolicy: 'cache-and-network',
   });
-  console.log("🚀 ~ file: App.tsx ~ line 19 ~ App ~ loading", loading)
 
   useEffect(() => {
     if (allPeople?.people.length && people.length === 0) {
       if (!allPeople.pageInfo.hasNextPage) {
         setShouldFetchMoreData(false);
       }
-
-      console.log('allPeople', allPeople.people);
-      console.log('people', people);
-      console.log('mix', [...people, ...allPeople.people])
 
       return setPeople(allPeople.people);
     }
@@ -56,7 +51,7 @@ function App() {
           }
 
           fetchMoreResult.allPeople.people = [
-            // ...previous.allPeople.people,
+            ...previous.allPeople.people,
             ...fetchMoreResult.allPeople.people,
           ];
 
@@ -66,16 +61,24 @@ function App() {
   };
 
   const onClickCharacter = (character: Character) =>{
-   console.log("🚀 ~ file: App.tsx ~ line 69 ~ onClickCharacter ~ character", character)
    setCurrentCharacter(character);
   }
   
   return (
     <section className="container">
       <GlobalStyles />
-      <Header/>
+      <Header
+        title={currentCharacter?.name || ''}
+        showCharacterTitle={!!currentCharacter?.name}
+        onClick={() => setCurrentCharacter(null)}
+      />
       <div className="wrapper">
-        <Sidebar loading={loading} error={!!error} loadMoreData={fetchMorePeople}>
+        <Sidebar
+          show={!!currentCharacter}
+          loading={loading} 
+          error={!!error} 
+          loadMoreData={fetchMorePeople}
+        >
           {
             people?.map((character) => (
               <CharacterCell 
@@ -86,7 +89,10 @@ function App() {
             ))
           }
         </Sidebar>
-        <Content currentCharacter={currentCharacter}  />
+        <Content 
+          currentCharacter={currentCharacter}
+          show={!!currentCharacter}
+        />
       </div>
     </section>
   );

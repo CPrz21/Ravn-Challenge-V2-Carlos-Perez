@@ -3,13 +3,15 @@ import { InformationCell } from "./InformationCell"
 import { ContentWrapper } from "./styles"
 
 type ContentProps = {
-  currentCharacter: Character | null
+  currentCharacter: Character | null,
+  show: boolean
 }
 export const Content: React.FC<ContentProps> = ({
-  currentCharacter
+  currentCharacter,
+  show
 }) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper className={`${show ? '' : 'hide'}`}>
       {currentCharacter && (<>
         <h1>General Information</h1>
         <InformationCell
@@ -34,7 +36,12 @@ export const Content: React.FC<ContentProps> = ({
           currentCharacter.vehicleConnection.vehicles?.length > 0 && (<>
             <h1>Vehicles</h1>
             {
-              currentCharacter.vehicleConnection.vehicles?.map((vehicle)=><InformationCell title={vehicle.name} />)
+              currentCharacter.vehicleConnection.vehicles?.map((vehicle)=>(
+                <InformationCell
+                  key={`${currentCharacter.id}${vehicle.name}`}
+                  title={vehicle.name} 
+                />
+              ))
             }
           </>)
         }
