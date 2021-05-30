@@ -1,8 +1,17 @@
 # RAVN CHALLENGE V2 CARLOS PEREZ
 Web app that allows you to browse the Star Wars characters and show their personal infomation
 
+## Live Demo
+[**RAVN CHALLENGE V2 CARLOS PEREZ**](https://ravn-challenge-v2-carlos-perez.netlify.app/)
+
 ## Screenshots
 ![screenshot1](./Screenshots/Screenshot1.png)
+![screenshot2](./Screenshots/Screenshot2.png)
+![screenshot3](./Screenshots/Screenshot3.png)
+![screenshot4](./Screenshots/Screenshot4.png)
+![screenshot5](./Screenshots/Screenshot5.png)
+![screenshot6](./Screenshots/Screenshot6.png)
+![screenshot7](./Screenshots/Screenshot7.png)
 
 
 ## Installation and Setup Instructions
