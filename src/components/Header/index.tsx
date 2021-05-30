@@ -14,7 +14,7 @@ export const Header: React.FC<HeaderProps> = ({
   console.log(window.innerWidth);
   return (
     <HeaderWrapper>
-      <img src={LeftArrow} alt="left-arrow" onClick={() => onClick()} />
+      {showCharacterTitle && <img src={LeftArrow} alt="left-arrow" onClick={() => onClick()} />}
       <h2 className="text-gray">{(window.innerWidth < 768 && showCharacterTitle) ? title : 'Ravn Star Wars Registry'}</h2>
     </HeaderWrapper>
   )
