@@ -5,13 +5,13 @@ Web app that allows you to browse the Star Wars characters and show their person
 [**RAVN CHALLENGE V2 CARLOS PEREZ**](https://ravn-challenge-v2-carlos-perez.netlify.app/)
 
 ## Screenshots
-<img src="./Screenshots/Screenshot1.png" alt="screenshot1" width="500"/>
-<img src="./Screenshots/Screenshot2.png" alt="screenshot2" width="500"/>
-<img src="./Screenshots/Screenshot3.png" alt="screenshot3" width="500"/>
-<img src="./Screenshots/Screenshot4.png" alt="screenshot4" width="500"/>
-<img src="./Screenshots/Screenshot5.png" alt="screenshot5" width="500"/>
-<img src="./Screenshots/Screenshot6.png" alt="screenshot6" width="500"/>
-<img src="./Screenshots/Screenshot7.png" alt="screenshot7" width="500"/>
+<img src="./Screenshots/Screenshot1.png" alt="screenshot1" width="300"/>
+<img src="./Screenshots/Screenshot2.png" alt="screenshot2" width="300"/>
+<img src="./Screenshots/Screenshot3.png" alt="screenshot3" width="300"/>
+<img src="./Screenshots/Screenshot4.png" alt="screenshot4" width="300"/>
+<img src="./Screenshots/Screenshot5.png" alt="screenshot5" width="300"/>
+<img src="./Screenshots/Screenshot6.png" alt="screenshot6" width="300"/>
+<img src="./Screenshots/Screenshot7.png" alt="screenshot7" width="300"/>
 
 
 ## Installation and Setup Instructions
