@@ -5,7 +5,7 @@ Web app that allows you to browse the Star Wars characters and show their person
 [**RAVN CHALLENGE V2 CARLOS PEREZ**](https://ravn-challenge-v2-carlos-perez.netlify.app/)
 
 ## Screenshots
-![screenshot1](./Screenshots/Screenshot1.png)
+<img src="./Screenshots/Screenshot1.png" alt="screenshot1" width="300"/>
 ![screenshot2](./Screenshots/Screenshot2.png)
 ![screenshot3](./Screenshots/Screenshot3.png)
 ![screenshot4](./Screenshots/Screenshot4.png)
