@@ -12,6 +12,16 @@ To Start Server:
 
 To Visit App:
 `localhost:3000`
+
+## Tools used in this project
+React
+Typescript
+Styled Component
+Graphql
+Apollo Client
+Node
+Yarn
+Nvm
 ## Live Demo
 [**RAVN CHALLENGE V2 CARLOS PEREZ**](https://ravn-challenge-v2-carlos-perez.netlify.app/)
 
