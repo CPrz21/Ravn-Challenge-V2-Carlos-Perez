@@ -2,7 +2,7 @@
 Web app that allows you to browse the Star Wars characters and show their personal infomation
 
 ## Screenshots
-<img src="Screenshots/Screenshot1">
+![screenshot1](./Screenshots/Screenshot1.png)
 
 
 ## Installation and Setup Instructions
